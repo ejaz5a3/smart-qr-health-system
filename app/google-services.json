@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "662594172016",
+    "project_id": "qrhealthsystem",
+    "storage_bucket": "qrhealthsystem.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662594172016:android:793390dd4543e5dfbb70b5",
+        "android_client_info": {
+          "package_name": "com.example.qrhealthsystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDDBH8OMHQHQbKRXP2J83O7SWeOJz69fA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Patient Record"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#0A4DA2"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Layout for Doctor: General Medical Info -->
+        <LinearLayout
+            android:id="@+id/layoutDoctorUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <EditText android:id="@+id/etDiseases" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Diseases" android:layout_marginBottom="12dp"/>
+                    <EditText android:id="@+id/etAllergies" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Allergies" android:layout_marginBottom="12dp"/>
+                    <EditText android:id="@+id/etMedications" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Medications" android:layout_marginBottom="12dp"/>
+                    <EditText android:id="@+id/etPastSurgeries" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Past Surgeries" android:layout_marginBottom="12dp"/>
+                    <EditText android:id="@+id/etEmergencyHistory" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Emergency History"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Layout for Nurse: Past History/Events -->
+        <LinearLayout
+            android:id="@+id/layoutNurseHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add History Event" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+                    <EditText android:id="@+id/etHistoryTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Title (e.g. Appendix Removal)" android:layout_marginBottom="12dp"/>
+                    <EditText android:id="@+id/etHistoryType" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Type (e.g. Surgery, Checkup)" android:layout_marginBottom="12dp"/>
+                    <EditText android:id="@+id/etHistoryHospital" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Hospital" android:layout_marginBottom="12dp"/>
+                    <EditText android:id="@+id/etHistoryDoctor" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Doctor" android:layout_marginBottom="12dp"/>
+                    <EditText android:id="@+id/etHistoryNotes" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Notes" android:minLines="3" android:gravity="top"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Save"
+            android:backgroundTint="#1976D2"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+</ScrollView>

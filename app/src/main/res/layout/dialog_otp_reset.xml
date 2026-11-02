@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0A4DA2"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Step 1: Phone Number -->
+    <LinearLayout
+        android:id="@+id/layoutStep1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your registered phone number to receive an OTP."
+            android:layout_marginBottom="16dp"/>
+        <EditText
+            android:id="@+id/etOtpPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="+91XXXXXXXXXX"
+            android:inputType="phone"
+            android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/btnSendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send OTP"
+            android:backgroundTint="#1976D2"/>
+    </LinearLayout>
+
+    <!-- Step 2: OTP Verification -->
+    <LinearLayout
+        android:id="@+id/layoutStep2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the 6-digit OTP sent to your phone."
+            android:layout_marginBottom="16dp"/>
+        <EditText
+            android:id="@+id/etOtpCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="XXXXXX"
+            android:inputType="number"
+            android:maxLength="6"
+            android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/btnVerifyOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify OTP"
+            android:backgroundTint="#4CAF50"/>
+    </LinearLayout>
+
+    <!-- Step 3: New Password -->
+    <LinearLayout
+        android:id="@+id/layoutStep3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set your new password."
+            android:layout_marginBottom="16dp"/>
+        <EditText
+            android:id="@+id/etNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New Password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="12dp"/>
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/btnResetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Password"
+            android:backgroundTint="#E53935"/>
+    </LinearLayout>
+
+</LinearLayout>
